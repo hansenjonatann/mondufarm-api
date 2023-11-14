@@ -1,0 +1,18 @@
+<?php 
+
+require 'config.php';
+
+if($_SERVER['REQUEST_METHOD'] ==  "POST")
+{
+    $response = array();
+    $fullname = $_POST['fullname'];
+    $username = $_POST['username'];
+    $address = $_POST['address'];
+    $phone = $_POST['phone'];
+    $password = md5($_POST['password']);
+
+    $query_check_user = mysqli_query($conn , "SELECT * FROM user ");
+}
+
+
+ ?>
